@@ -38,6 +38,18 @@ var board = {
      isMine: true,
      hidden: true
    },
+   //{
+  //  row: 3,
+  //  col: 0,
+  //  isMine: false,
+  //  hidden: true
+  //},
+  // {
+  //   row: 3,
+  //   col: 1,
+  //   isMine: false,
+  //   hidden: true
+  // },
    {
      row: 0,
      col: 2,
@@ -56,6 +68,36 @@ var board = {
      isMine: false,
      hidden: true
    }
+   // {
+   //   row: 3,
+   //   col: 2,
+   //   isMine: false,
+   //   hidden: true
+   // },
+   // {
+   //   row: 0,
+   //   col: 3,
+   //   isMine: false,
+   //   hidden: true
+   // },
+   // {
+   //   row: 1,
+   //   col: 3,
+   //   isMine: false,
+   //   hidden: true
+   // },
+   // {
+   //   row: 2,
+   //   col: 3,
+   //   isMine: false,
+   //   hidden: true
+   // },
+   // {
+   //   row: 3,
+   //   col: 2,
+   //   isMine: false,
+   //   hidden: true
+   //}
  ]
 }
 
@@ -108,7 +150,7 @@ function checkForWin () {
     const cell = board.cells[i]
     if (!cell.isMine && !cell.hidden){
       goodCells++
-    }  
+    }
 
     if (cell.isMine && cell.isMarked){
       goodCells++
@@ -119,25 +161,16 @@ function checkForWin () {
     lib.displayMessage('You win!')
   }
 
-//if (isMine === false && hidden === false)
-//if (isMine === true && isMarked === true)
-
+}
 
 
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
-}
-
 
 
 
 //In startGame, above lib.initBoard(), write a for loop. This should loop through the contents of board.cells. (Remember, board.cells is an array of objects.)
-
-
-
-
-
 
 
 
@@ -152,6 +185,8 @@ function checkForWin () {
 //
 // It will return cell objects in an array. You should loop through
 // them, counting the number of times `cell.isMine` is true.
+
+
 function countSurroundingMines (cell) {
   let count = 0
   let surrounding = lib.getSurroundingCells(cell.row, cell.col)

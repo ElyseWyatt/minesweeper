@@ -8,6 +8,8 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  background-color: #676EFD;
+  font-style: bold;
 }
 
 #message, #notes {
@@ -27,7 +29,7 @@ body {
 
 .board div {
   color: green;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 75px;
   height: 75px;
   border: 1px #ccc dotted;
